@@ -3,6 +3,8 @@
 
 #include "Game/ABGameMode.h"
 #include "ABGameMode.h"
+
+#include "ArenaBattle.h"
 #include "Player/ABPlayerController.h"
 
 AABGameMode::AABGameMode()
@@ -23,4 +25,35 @@ AABGameMode::AABGameMode()
 void AABGameMode::OnPlayerDead()
 {
 
+}
+
+void AABGameMode::PreLogin(const FString& Options, const FString& Address, const FUniqueNetIdRepl& UniqueId,
+	FString& ErrorMessage)
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	Super::PreLogin(Options, Address, UniqueId, ErrorMessage);
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
+}
+
+APlayerController* AABGameMode::Login(UPlayer* NewPlayer, ENetRole InRemoteRole, const FString& Portal,
+	const FString& Options, const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	APlayerController* NewPlayerController = Super::Login(NewPlayer, InRemoteRole, Portal, Options, UniqueId, ErrorMessage);
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
+	return NewPlayerController;
+}
+
+void AABGameMode::PostLogin(APlayerController* NewPlayer)
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	Super::PostLogin(NewPlayer);
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
+}
+
+void AABGameMode::StartPlay()
+{
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("Begin"));
+	Super::StartPlay();
+	AB_LOG(LogABNetwork, Log, TEXT("%s"), TEXT("End"));
 }
