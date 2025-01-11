@@ -12,7 +12,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af31d880-4ab8-474a-b328-3ebe6fa8ba10" name="변경" comment="" />
+    <list default="true" id="af31d880-4ab8-474a-b328-3ebe6fa8ba10" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArenaBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArenaBattle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/EditorPerProjectUserSettings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/Config/WindowsEditor/Engine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ArenaBattle/Prop/ABFountain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ArenaBattle/Prop/ABFountain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ArenaBattle/Prop/ABFountain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ArenaBattle/Prop/ABFountain.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +46,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.EpicGames.AspNet.executor": "Run",
+    "C/C++ Project.ArenaBattle.executor": "Debug",
     "C/C++ 프로젝트.ArenaBattle.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -52,7 +60,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ 프로젝트.ArenaBattle">
+  <component name="RunManager" selected="C/C++ Project.ArenaBattle">
     <configuration name="ArenaBattle" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
         <option name="CONFIGURATION" value="Development_Editor" />
@@ -66,6 +74,18 @@
         <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
         <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/ArenaBattle.vcxproj" />
       </configuration_1>
+      <configuration_2 setup="1">
+        <option name="CONFIGURATION" value="DebugGame_Editor" />
+        <option name="PLATFORM" value="x64" />
+        <option name="CURRENT_LAUNCH_PROFILE" value="Local" />
+        <option name="EXE_PATH" value="$(LocalDebuggerCommand)" />
+        <option name="PROGRAM_PARAMETERS" value="$(LocalDebuggerCommandArguments)" />
+        <option name="WORKING_DIRECTORY" value="$(LocalDebuggerWorkingDirectory)" />
+        <option name="PASS_PARENT_ENVS" value="1" />
+        <option name="USE_EXTERNAL_CONSOLE" value="0" />
+        <option name="TERMINAL_INTERACTION_BEHAVIOR" value="AUTO_DETECT" />
+        <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/ArenaBattle.vcxproj" />
+      </configuration_2>
       <option name="DEFAULT_PROJECT_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/ArenaBattle.vcxproj" />
       <option name="PROJECT_FILE_PATH" value="$PROJECT_DIR$/Intermediate/ProjectFiles/ArenaBattle.vcxproj" />
       <option name="AUTO_SELECT_PRIORITY" value="10010" />
@@ -161,6 +181,7 @@
       <updated>1735557685752</updated>
       <workItem from="1735557687656" duration="89000" />
       <workItem from="1735557993861" duration="4348000" />
+      <workItem from="1736485820564" duration="2174000" />
     </task>
     <servers />
   </component>
