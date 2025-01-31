@@ -37,11 +37,19 @@ public:
 	UPROPERTY(ReplicatedUsing = OnRep_ServerLightColor)
 	FLinearColor ServerLightColor;
 
+	// property replication function
 	UFUNCTION()
 	void OnRep_ServerLightColor();
 	
 	UFUNCTION()
 	void OnRep_ServerRotationYaw();
+
+	// RPC function
+	// Client RPC
+
+	// NetMulticast RPC
+	UFUNCTION(NetMulticast, Unreliable)
+	void NetMulticastRPCChangeLigthColor(const FLinearColor& NewColor);
 	
 	float RotationRate = 30.0f;
 	float ClientTimeSinceUpdate = 0.0f;			// 서버로부터 데이터를 받고 시간이 얼마나 경과했는지를 기록

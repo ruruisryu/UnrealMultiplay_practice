@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "ArenaBattleEditor Editor Win64 Development (ArenaBattle)",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Users\\atznu\\Documents\\Github Projects\\UnrealMultiplay_practice\\ArenaBattle\\.vscode\\compileCommands_ArenaBattle.json"
+        },
+        {
+            "name": "Win32",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.42.34433\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "C:\\Users\\atznu\\Documents\\Github Projects\\UnrealMultiplay_practice\\ArenaBattle\\.vscode\\compileCommands_Default.json"
+        }
+    ],
+    "version": 4
+}

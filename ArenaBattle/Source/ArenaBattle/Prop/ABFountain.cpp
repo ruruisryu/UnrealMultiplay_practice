@@ -49,10 +49,14 @@ void AABFountain::BeginPlay()
 		GetWorld()->GetTimerManager().SetTimer(ColorTimer, FTimerDelegate::CreateLambda([&]
 		{
 			// 서버에서 ServerLightColor 랜덤값으로 업데이트
-			ServerLightColor = FLinearColor(FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), 1.0f);
+			// ServerLightColor = FLinearColor(FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), 1.0f);
 			// OnRep 함수의 경우 서버에서는 동작을 하지 않기 때문에 서버쪽에서도 관련된 액션을 취할 수 있도록 명시적으로 호출
 			// 요거 호출안하면 호스트 클라에서는 분수대 색 안 바뀜
-			OnRep_ServerLightColor();
+			// OnRep_ServerLightColor();
+
+			// NetMulticastRPC 호출
+			const FLinearColor NewColor = FLinearColor(FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), FMath::RandRange(0.0f, 1.0f), 1.0f);
+			NetMulticastRPCChangeLigthColor(NewColor);
 		}
 		), 1.0f, true, 0.0f);
 
@@ -127,6 +131,15 @@ void AABFountain::OnRep_ServerRotationYaw()
 
 	ClientTimeBetweenLastUpdate = ClientTimeSinceUpdate;
 	ClientTimeSinceUpdate = 0.0f;
+}
+
+void AABFountain::NetMulticastRPCChangeLigthColor_Implementation(const FLinearColor& NewColor)
+{
+	TObjectPtr<UPointLightComponent> PointLight = Cast<UPointLightComponent>(GetComponentByClass(UPointLightComponent::StaticClass()));
+	if (PointLight)
+	{
+		PointLight->SetLightColor(NewColor);
+	}
 }
 
 bool AABFountain::IsNetRelevantFor(const AActor* RealViewer, const AActor* ViewTarget, const FVector& SrcLocation) const
